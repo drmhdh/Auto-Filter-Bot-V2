@@ -81,7 +81,9 @@ async def filter(client: Bot, message: Message):
             [InlineKeyboardButton(text=f"📃 Pages 1/{data['total']}",callback_data="pages")]
         )
         if BUTTON:
-            buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
+            buttons.append(
+                [InlineKeyboardButton(text="Close ❌",callback_data="close")]
+            )
 
         await message.reply_text(
                 f"<b> Here is the result for {message.text}</b>",
@@ -115,7 +117,9 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton(f"📃 Pages {int(index)+2}/{data['total']}", callback_data="pages")]
                 )
                 if BUTTON:
-                    buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
+                    buttons.append(
+                        [InlineKeyboardButton(text="Close ❌",callback_data="close")]
+                    )
 
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
@@ -158,7 +162,9 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
                 )
                 if BUTTON:
-                    buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
+                    buttons.append(
+                        [InlineKeyboardButton(text="Close ❌",callback_data="close")]
+                    )
 
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
@@ -174,7 +180,9 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                     [InlineKeyboardButton(f"📃 Pages {int(index)}/{data['total']}", callback_data="pages")]
                 )
                 if BUTTON:
-                    buttons.append([InlineKeyboardButton(text="Close ❌",callback_data="close")])
+                    buttons.append(
+                        [InlineKeyboardButton(text="Close ❌",callback_data="close")]
+                    )
 
                 await query.edit_message_reply_markup( 
                     reply_markup=InlineKeyboardMarkup(buttons)
