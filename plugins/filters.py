@@ -22,8 +22,8 @@ from bot import Bot
 from script import script
 from database.mdb import searchquery
 from plugins.channel import deleteallfilters
-from config import AUTH_USERS
-from info import BUTTON
+from config import AUTH_USERS, BUTTON
+
                  
 
 BUTTONS = {}
@@ -222,7 +222,9 @@ async def cb_handler(client: Bot, query: CallbackQuery):
                 disable_web_page_preview=True
             )
 
-
+        if query.data == "close_data":
+            await query.message.delete()
+        
         elif query.data == "delallconfirm":
             await query.message.delete()
             await deleteallfilters(client, query.message)
