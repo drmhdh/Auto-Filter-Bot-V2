@@ -35,7 +35,7 @@ VID_SEARCH = os.environ.get("VID_SEARCH", "no").lower()
 MUSIC_SEARCH = os.environ.get("MUSIC_SEARCH", "no").lower()
 
 
-BUTTON = environ.get("BUTTON",False)
+BUTTON = environ.get("BUTTON", "False").lower()
 
 TG_BOT_SESSION = os.environ.get("TG_BOT_SESSION", "bot")
 TG_BOT_WORKERS = int(os.environ.get("TG_BOT_WORKERS", "4"))
