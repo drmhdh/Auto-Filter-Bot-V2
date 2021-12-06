@@ -24,7 +24,7 @@ from database.mdb import searchquery
 from plugins.channel import deleteallfilters
 from config import AUTH_USERS, BUTTON
 
-                 
+from utils import is_subscribed,                
 
 BUTTONS = {}
  
