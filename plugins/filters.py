@@ -84,9 +84,22 @@ async def filter(client: Bot, message: Message):
         filenames, links = await searchquery(group_id, name)
         if filenames and links:
             for filename, link in zip(filenames, links):
-                btn.append(
-                    [InlineKeyboardButton(text=f"{filename}",url=f"{link}")]
-                )
+                
+                clicked = msg.from_user.id
+                try:
+                    typed = msg.message.reply_to_message.from_user.id
+                except:
+                    typed = msg.from_user.id
+                    pass
+                if (clicked == typed) or (clicked in AUTH_USERS) or (clicked in ADMINS) or (clicked in is_subscribed):
+                    btn.append(
+                        [InlineKeyboardButton(text=f"{filename}",url=f"{link}")]
+                    )
+                    
+                    else:
+                        btn.append(
+                            [InlineKeyboardButton(text=f"{filename}",url=f"https://t.me/{temp.U_NAME}?start")]
+                        )
         else:
             return
 
