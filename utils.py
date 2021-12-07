@@ -6,7 +6,7 @@ from pyrogram.types import Message
 from typing import List
 from datetime import datetime
 from typing import Union
-from database.users_chats_db import db
+
 from pyrogram.errors import InputUserDeactivated, UserNotParticipant, FloodWait, UserIsBlocked, PeerIdInvalid
 from info import AUTH_CHANNEL, AUTH_USERS, AUTH_GROUPS, BUTTON, START_MSG, CHANNELS, ADMINS, PICS, API_KEY
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQuery
