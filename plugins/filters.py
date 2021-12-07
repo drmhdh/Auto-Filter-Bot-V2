@@ -24,6 +24,9 @@ from database.mdb import searchquery
 from plugins.channel import deleteallfilters
 from config import AUTH_USERS, BUTTON
 
+from database.ia_filterdb import Media, get_file_details, get_search_results
+from database.users_chats_db import db
+from database.connections_mdb import active_connection, all_connections, delete_connection, if_active, make_active, make_inactive
 from utils import is_subscribed
 from info import AUTH_CHANNEL, AUTH_USERS, AUTH_GROUPS, BUTTON, START_MSG, CHANNELS, ADMINS, PICS, SINGLE_BUTTON
 
