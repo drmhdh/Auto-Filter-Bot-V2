@@ -13,8 +13,7 @@ logger.setLevel(logging.INFO)
 
 
 
-db = client[DATABASE_NAME]
-instance = Instance.from_db(db)
+
 
 @instance.register
 class Media(Document):
