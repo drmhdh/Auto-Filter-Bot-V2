@@ -39,8 +39,7 @@ START_CHAR = ('\'', '"', SMART_OPEN)
 
 
 
-imdbdb=client[DATABASE_NAME_2]
-imdb=Instance.from_db(imdbdb)
+
 # temp db for banned 
 class temp(object):
     BANNED_USERS = []
