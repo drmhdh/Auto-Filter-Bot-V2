@@ -35,7 +35,7 @@ SMART_CLOSE = '”'
 START_CHAR = ('\'', '"', SMART_OPEN)
 
 
-db = client[DATABASE_NAME]
+
 instance = Instance.from_db(db)
 
 
