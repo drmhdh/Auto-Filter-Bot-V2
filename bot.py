@@ -10,7 +10,6 @@ logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.ERROR)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 
-from database.users_chats_db import db
 from pyrogram import Client, __version__
 from pyrogram.raw.all import layer
 from utils import Media
