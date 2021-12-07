@@ -26,7 +26,7 @@ from config import AUTH_USERS, BUTTON
 
 
 from utils import is_subscribed
-from info import AUTH_CHANNEL, AUTH_USERS, AUTH_GROUPS, BUTTON, START_MSG, CHANNELS, ADMINS, PICS, SINGLE_BUTTON
+from info import AUTH_CHANNEL, AUTH_USERS, AUTH_GROUPS, BUTTON, CHANNELS, ADMINS
 
 BUTTONS = {}
  
