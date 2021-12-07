@@ -97,10 +97,10 @@ async def filter(client: Bot, message: Message):
                         [InlineKeyboardButton(text=f"{filename}",url=f"{link}")]
                     )
                     
-                    else:
-                        btn.append(
-                            [InlineKeyboardButton(text=f"{filename}",url=f"https://t.me/{temp.U_NAME}?start")]
-                        )
+                else:
+                    btn.append(
+                        [InlineKeyboardButton(text=f"{filename}",url=f"https://t.me/{temp.U_NAME}?start")]
+                    )
         else:
             return
 
