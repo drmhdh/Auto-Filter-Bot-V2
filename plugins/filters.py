@@ -304,6 +304,12 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             await query.message.reply_to_message.delete()
             await query.message.delete()
 
+        elif query.data.startswith("checksub"):
+            if AUTH_CHANNEL and not await is_subscribed(client, query):
+                await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒",show_alert=True)
+                
+        
+    
     else:
         await query.answer("Thats not for you!!",show_alert=True)
 
