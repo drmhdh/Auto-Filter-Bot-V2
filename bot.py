@@ -64,8 +64,7 @@ class Bot(Client):
         AUTH_USERS.add(680815375)
         self.USER, self.USER_ID = await User().start()
         
-        temp.BANNED_USERS = b_users
-        temp.BANNED_CHATS = b_chats
+   
         
         
     async def stop(self, *args):
