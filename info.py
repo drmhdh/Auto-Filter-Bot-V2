@@ -58,8 +58,6 @@ BUTTON = environ.get("BUTTON",False)
 
 
 
-else:
-    CUSTOM_FILE_CAPTION=FILE_CAPTION
 
    
 
