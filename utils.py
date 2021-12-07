@@ -13,7 +13,7 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton, CallbackQ
 from pyrogram.file_id import FileId
 from pymongo.errors import DuplicateKeyError
 from umongo import Instance, Document, fields
-from motor.motor_asyncio import AsyncIOMotorClient
+
 from marshmallow.exceptions import ValidationError
 import os
 import PTN
