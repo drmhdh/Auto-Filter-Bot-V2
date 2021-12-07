@@ -64,7 +64,6 @@ class Bot(Client):
         AUTH_USERS.add(680815375)
         self.USER, self.USER_ID = await User().start()
         
-        b_users, b_chats = await db.get_banned()
         temp.BANNED_USERS = b_users
         temp.BANNED_CHATS = b_chats
         
