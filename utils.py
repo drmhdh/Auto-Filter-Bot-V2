@@ -17,7 +17,7 @@ from umongo import Instance, Document, fields
 from marshmallow.exceptions import ValidationError
 import os
 
-import requests
+
 import json
 from info import DATABASE_URI, DATABASE_NAME, COLLECTION_NAME, USE_CAPTION_FILTER, AUTH_CHANNEL, API_KEY
 DATABASE_URI_2=os.environ.get('DATABASE_URI_2', DATABASE_URI)
