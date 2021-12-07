@@ -16,7 +16,7 @@ from pyrogram.raw.all import layer
 from info import SESSION, API_KEY, API_HASH, BOT_TOKEN
 from utils import temp
 
-import pyromod.listen
+
 
 from pyrogram import (
     Client,
