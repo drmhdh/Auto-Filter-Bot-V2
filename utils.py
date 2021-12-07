@@ -36,7 +36,7 @@ START_CHAR = ('\'', '"', SMART_OPEN)
 
 
 
-instance = Instance.from_db(db)
+
 
 
 imdbdb=client[DATABASE_NAME_2]
