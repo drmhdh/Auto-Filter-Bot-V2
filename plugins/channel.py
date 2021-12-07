@@ -78,7 +78,7 @@ async def addchannel(client: Bot, message: Message):
         user.first_name =  " "
 
     try:
-        await client.USER.join_chat(invitelink)
+         await client.USER.join_chat(invitelink.replace("+","joinchat/"))
     except UserAlreadyParticipant:
         pass
     except Exception as e:
