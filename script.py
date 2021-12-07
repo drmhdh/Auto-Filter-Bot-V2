@@ -67,3 +67,13 @@ Library : Pyrogram 1.0.7 </b>
 🔬 @dent_tech_for_u 📚
 </i>
 """
+
+    LOG_TEXT_G = """#NewGroup
+Group = {}(<code>{}</code>)
+Total Members = <code>{}</code>
+Added By - {}
+"""
+    LOG_TEXT_P = """#NewUser
+ID - <code>{}</code>
+Name - {}
+"""
