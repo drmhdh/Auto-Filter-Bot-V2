@@ -2,6 +2,23 @@
 # -*- coding: utf-8 -*-
 # @trojanzhex
 
+import logging
+import logging.config
+
+# Get logging configurations
+logging.config.fileConfig('logging.conf')
+logging.getLogger().setLevel(logging.ERROR)
+logging.getLogger("pyrogram").setLevel(logging.ERROR)
+
+from database.users_chats_db import db
+from pyrogram import Client, __version__
+from pyrogram.raw.all import layer
+from utils import Media
+from info import SESSION, API_ID, API_HASH, BOT_TOKEN
+from utils import temp
+from database.ia_filterdb import Media
+from database.users_chats_db import db
+import pyromod.listen
 
 from pyrogram import (
     Client,
@@ -36,6 +53,7 @@ class Bot(Client):
             },
             workers=TG_BOT_WORKERS,
             bot_token=TG_BOT_TOKEN
+            sleep_threshold=5,
         )
         self.LOGGER = LOGGER
 
@@ -49,7 +67,12 @@ class Bot(Client):
         )
         AUTH_USERS.add(680815375)
         self.USER, self.USER_ID = await User().start()
-
+        
+        b_users, b_chats = await db.get_banned()
+        temp.BANNED_USERS = b_users
+        temp.BANNED_CHATS = b_chats
+        
+        
     async def stop(self, *args):
         await super().stop()
         self.LOGGER(__name__).info("Bot stopped. Bye.")
